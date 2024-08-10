@@ -18,7 +18,7 @@ int main(){
     bzero(&address,0);
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = htonl(INADDR_ANY);
-    address.sin_port = 9999;
+    address.sin_port = htons(9998);
 
     //bind 用于绑定address中的信息
     int ret = bind(listenfd, (struct sockaddr*)&address, sizeof(address));
